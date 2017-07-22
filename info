@@ -1,0 +1,34 @@
+npm init
+
+npm install babel-cli babel-core babel-preset-es2015 --save-dev
+npm install http-server --save-dev
+
+js/main.js
+
+import {sum} from "./lib";
+alert(sum(...array));
+
+lib.js
+
+
+function sum(a, b,c)
+{
+    alert(a+b+c);
+}
+
+var array = [1,4,5,6];
+
+
+npm install webpack --save-dev   (For multiple file bundling)
+npm install babel-loader --save-dev (For loading)
+
+
+add line in script in resource.json
+
+"babel": "babel --presets es2015 js/main.js -o build/bundle.js",
+    "start": "http-server -p 3000",
+    "webpack": "webpack --watch"
+
+
+npm run webpack
+npm run start
